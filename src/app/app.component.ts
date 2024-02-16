@@ -1,13 +1,38 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+
+interface User {
+user: any;
+  username: string;
+  gender: string;
+  email: string;
+  phoneNumber: string;
+}
 
 @Component({
   selector: 'app-root',
-  standalone: true,
-  imports: [RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'myapp';
+  user: User = {
+    username: '',
+    gender: '',
+    email: '',
+    phoneNumber: '',
+    user: undefined
+  };
+
+  genderOptions = ['Male', 'Female', 'Other'];
+
+  onSubmit() {
+    // Perform necessary validations here if you want
+    console.log('User details:', this.user);
+    this.navigateToSecondPage(); // Call your navigation function
+  }
+
+  navigateToSecondPage() {
+    // Implement your navigation logic here (e.g., using a router)
+    // Example:
+    // router.navigate(['/second-page']);
+  }
 }

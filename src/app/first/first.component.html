@@ -1,0 +1,64 @@
+<div class="center-container">
+  <div class="Register">
+    <form>
+      <!-- Username input -->
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" required [(ngModel)]="formData.username">
+
+      <!-- Gender radio buttons -->
+      <div>
+        <label>Gender:</label>
+        <label for="male">
+          <input type="radio" id="male" name="gender" value="male" [(ngModel)]="formData.gender"><div class="center-container">
+            <div class="Register">
+              <form>
+                <!-- Username input -->
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required [(ngModel)]="formData.username">
+          
+                <!-- Gender radio buttons -->
+                <div>
+                  <label>Gender:</label>
+                  <label for="male">
+                    <input type="radio" id="male" name="gender" value="male" [(ngModel)]="formData.gender"> Male
+                  </label>
+                  <label for="female">
+                    <input type="radio" id="female" name="gender" value="female" [(ngModel)]="formData.gender"> Female
+                  </label>
+                  <label for="other">
+                    <input type="radio" id="other" name="gender" value="other" [(ngModel)]="formData.gender"> Other
+                  </label>
+                </div>
+          
+                <!-- Email input -->
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required [(ngModel)]="formData.email">
+          
+                <!-- Submit button -->
+                <div style="text-align: center; margin-top: 20px;">
+                  <button (click)="navigateToNewPage()">Submit</button>
+                </div>
+              </form>
+            </div>
+          </div>
+           Male
+        </label>
+        <label for="female">
+          <input type="radio" id="female" name="gender" value="female" [(ngModel)]="formData.gender"> Female
+        </label>
+        <label for="other">
+          <input type="radio" id="other" name="gender" value="other" [(ngModel)]="formData.gender"> Other
+        </label>
+      </div>
+
+      <!-- Email input -->
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required [(ngModel)]="formData.email">
+
+      <!-- Submit button -->
+      <div style="text-align: center; margin-top: 20px;">
+        <button (click)="navigateToNewPage()">Submit</button>
+      </div>
+    </form>
+  </div>
+</div>
